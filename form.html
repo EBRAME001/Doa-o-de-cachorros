@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário adoção</title>
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="shortcut icon" href="imgs/icones/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="about.html" class="item-cabecalho , item-cabecalho-texto">Sobre nós</a>
+        <a href="index.html" class="item-cabecalho">
+            <img src="imgs/icones/logo.svg" alt="">
+        </a>
+        <a href="form.html" class="item-cabecalho , item-cabecalho-texto">Adote aqui 🐶</a>
+    </header>
+    
+    <div class="container-formulario">
+        <form action="get">
+        <div class="container-labels-formulario">
+
+                <div class="campo-formulario , campo-formulario-maior">
+                    <label for="nome" class="label-item-nome">Nome completo</label>
+                    <input type="text" id="nome" class="input-item" required>
+                </div>
+                <div class="campo-formulario , campo-formulario-maior">
+                    <label for="endereco" class="label-item-endereco">Endereço</label>
+                    <input type="text" id="endereco" class="input-item" required>
+                </div>    
+            
+                <div class="container-menor">
+                    <div class="campo-formulario , campo-formulario-menor">
+                        <label for="cidade" class="label-item-menor">Cidade</label>
+                        <input type="text" id="cidade" class="input-item-menor" required>
+                    </div>
+                    <div class="campo-formulario , campo-formulario-menor">
+                        <label for="bairro" class="label-item-menor">Bairro</label>
+                        <input type="text" id="bairro" class="input-item-menor" required>
+                    </div>
+                    <div class="campo-formulario , campo-formulario-menor">
+                        <label for="cep" class="label-item-menor">Cep</label>
+                        <input type="text" id="cep" class="input-item-menor" required>
+                    </div>
+                </div>
+        </div>
+        
+            <button type="submit" class="custom-button">
+                Enviar <i class="fas fa-paw"></i>
+            </button>
+        </form>
+    </div>
+    <script src="script/form.js"></script>
+</body>
+</html>

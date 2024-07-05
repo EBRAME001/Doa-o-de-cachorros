@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Formulário</title>
+</head>
+<body>
+    <h1>Dados do Formulário</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Cidade</th>
+                <th>Bairro</th>
+                <th>CEP</th>
+            </tr>
+        </thead>
+        <tbody id="formDataTable">
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const formData = JSON.parse(localStorage.getItem('formData'));
+            if (formData) {
+                const tableBody = document.getElementById('formDataTable');
+                const row = document.createElement('tr');
+                Object.keys(formData).forEach(key => {
+                    const cell = document.createElement('td');
+                    cell.textContent = formData[key];
+                    row.appendChild(cell);
+                });
+                tableBody.appendChild(row);
+            } else {
+                console.error("No data found in LocalStorage.");
+            }
+        });
+    </script>
+</body>
+</html>
